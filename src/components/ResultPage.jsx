@@ -6,7 +6,8 @@ export default function ResultPage({ scores, onReset }) {
   const result = results[typeCode];
 
   // X(Twitter)シェア用テキスト
-  const shareText = `16タイプおみくじの結果: ${result.title} (${typeCode})\n\n${result.yearTip}`;
+  const shareUrl = 'https://kohaku0822.github.io/omikuji-16types/';
+  const shareText = `16タイプおみくじの結果: ${result.title} (${typeCode})\n\n${result.yearTip}\n\n${shareUrl}`;
 
   const handleShare = () => {
     const tweetText = encodeURIComponent(shareText);
